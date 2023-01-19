@@ -1,0 +1,4 @@
+.toast-meesage{
+    background: inherit;
+    backdrop-filter: blur(10px);
+}
