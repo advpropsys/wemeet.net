@@ -11,7 +11,7 @@ const Navbar = () => {
             <p className=" text-opacity-70 font-light tracking-widest">Network Like A God.</p>
         </div>
         <div className="navbar-end">
-            <Link href="/" className="btn text-black bg-white bg-opacity-20 border-none hover:text-white ">Get started</Link>
+            <Link href="/" className="btn text-black bg-white bg-opacity-20 border-none hover:text-white hidden sm:button ">Get started</Link>
         </div>
     </div>
     )

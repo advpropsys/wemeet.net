@@ -23,14 +23,14 @@ const Form = () => {
             // Success if status code is 201
             console.log(res.status);
             if (res.status === 201) {
-            toast('Thank you for signing up!', { type: 'success',className:"bg-white backdrop-filter backdrop-blur-md bg-opacity-25"});
+            toast('Thank you for signing up!', { type: 'success',className:"bg-white backdrop-filter backdrop-blur-md bg-opacity-25 z-40"});
             } else {
             toast('Please re-check your inputs.', { type: 'error' });
             }} else {toast('Please re-check your inputs.', { type: 'error' });}
             
     };
     return(
-    <div className="form-control w-96 max-w-full flex-col space-y-3 relative z-0">
+    <div className="form-control w-96 max-w-full flex-col space-y-3 relative z-20">
         <label className="input-group input-group-vertical bg-white rounded-md backdrop-filter backdrop-blur-md bg-opacity-25">
             <span>Telegram nick</span>
             <input type="text" placeholder="@durov" className="input input-bordered bg-white rounded-md backdrop-blur-md bg-opacity-10" onChange={(e) => setEmail(e.target.value)} required/>
@@ -44,7 +44,7 @@ const Form = () => {
             <input type="text" placeholder="(optional)" className="input input-bordered bg-white rounded-md backdrop-filter backdrop-blur-md bg-opacity-10" onChange={(e) => setToken(e.target.value)}/>
         </label>
         <button className="btn  text-black bg-white bg-opacity-20 border-none hover:text-white" onClick={submitForm}>Join</button>
-        <ToastContainer toastClassName={"bg-white backdrop-filter backdrop-blur-md bg-opacity-25"} className="backdrop-filter backdrop-blur-md bg-opacity-25" position="bottom-center"/>
+        <ToastContainer toastClassName={"bg-white backdrop-filter backdrop-blur-md bg-opacity-25 z-40"} className="backdrop-filter backdrop-blur-md bg-opacity-25" position="bottom-center"/>
         {/* <iframe  className="bg-opacity-0" height="450px" src="https://notionforms.io/forms/zapis-na-wemeet-beta"></iframe> */}
     </div>
     )
